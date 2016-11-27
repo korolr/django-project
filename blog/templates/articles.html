@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+{% block article %}
+{% for article in articles %}
+
+<div class="post-preview">
+                      <a href="/articles/get/{{ article.id }}/">
+                          <h2 class="post-title">
+                          {{ article.article_title }}
+                          </h2>
+                          <h3 class="post-subtitle">
+                            {{ article.article_taxt }}
+                          </h3>
+                      </a>
+                      <p class="post-meta">Дата: {{ article.article_date }}</p>
+                  </div>
+<hr>
+ {% endfor %}
+ {% endblock %}
